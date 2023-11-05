@@ -4,7 +4,6 @@ import CoverDesktop from "@/components/CoverDesktop";
 import CoverMobile from "@/components/CoverMobile";
 import WelcomeSection from "@/components/WelcomeSection";
 import { useEffect, useRef, useState } from "react";
-import "animate.css";
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -22,7 +21,7 @@ export default function Home() {
         <CoverDesktop />
       </div>
       <div
-        className={` w-full h-screen max-w-lg min-w-[320px] overflow-y-auto mx-auto `}
+        className={` overflow-y-hidden w-full relative max-w-lg min-w-[320px] mx-auto custom-scrollbar`}
       >
         <CoverMobile
           isOpen={isOpen}

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const WelcomeSection = ({ isOpen }: { isOpen: boolean }) => {
@@ -5,18 +6,24 @@ const WelcomeSection = ({ isOpen }: { isOpen: boolean }) => {
     <div
       className={`${
         isOpen ? " open" : "closed"
-      } absolute transition-all top-0 duration-[4000] w-full h-screen max-w-lg min-w-[320px] text-white z-[1]`}
+      } transition-all relative duration-[4000] w-full h-screen max-w-lg min-w-[320px] text-white z-[1]`}
     >
       <div>
-        <img
+        <Image
+          width={100}
+          height={100}
+          unoptimized
+          priority
           src="/image/foto-3.png"
           alt="shpae-2"
           className="absolute w-full h-full left-0 top-0 object-cover object-top z-0"
         />
       </div>
-      <div className=" w-full absolute left-0 bottom-0 ">
+      <div className="w-full absolute left-0 bottom-0 ">
         <div className="relative z-0 m-0">
-          <img
+          <Image
+            width={100}
+            height={100}
             src="/image/shape-2.svg"
             alt="shape-2"
             className="w-full  object-cover "

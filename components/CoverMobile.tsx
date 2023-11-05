@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React, { Dispatch, SetStateAction } from "react";
 
 const CoverMobile = ({
@@ -15,15 +16,22 @@ const CoverMobile = ({
         isOpen
           ? "-translate-y-full opacity-0 invisible"
           : "translate-y-0 opacity-100 visible"
-      } transition-all duration-1000 w-full h-full  min-w-[320px] relative z-[3]`}
+      } transition-all duration-1000 w-full h-screen  min-w-[320px] absolute z-[3]`}
     >
-      <img
+      <Image
+        width={100}
+        height={100}
+        unoptimized
+        priority
         src="/image/foto-2.png"
         alt="pengantin"
         className="absolute w-full h-full left-0 bottom-0 object-cover object-top z-0 "
       />
       <div className="relative z-[1] h-full w-full bg-transparent flex flex-col items-center p-5 ">
-        <img
+        <Image
+          width={100}
+          height={100}
+          unoptimized
           src="/image/pigeons-2.svg"
           alt="pigeons"
           className="my-6 animate-fade-down"
@@ -41,11 +49,21 @@ const CoverMobile = ({
             setIsPlaying(true);
           }}
         >
-          <img src="/image/mail.svg" alt="mail" className="w-[20px] h-[20px]" />{" "}
+          <Image
+            width={100}
+            height={100}
+            unoptimized
+            src="/image/mail.svg"
+            alt="mail"
+            className="w-[20px] h-[20px]"
+          />{" "}
           <p> Open Invitation</p>
         </button>
         <div className=" w-full absolute left-0 bottom-0">
-          <img
+          <Image
+            width={100}
+            height={100}
+            unoptimized
             src="/image/shape-1.svg"
             alt="shape-1"
             className="w-full h-full relative z-0"

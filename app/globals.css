@@ -9,7 +9,7 @@
 }
 body {
   max-height: 100vh;
-  overflow-y: hidden;
+  overflow: hidden;
 }
 
 .open {
@@ -41,4 +41,18 @@ body {
     opacity: 0;
     transform: translateY(100%);
   }
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 7px;
+  height: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #dbb800;
+  border-radius: 100px;
 }

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React, { Dispatch, SetStateAction } from "react";
 
 const AudioControll = ({
@@ -25,18 +26,30 @@ const AudioControll = ({
         <div
           className={`${isPlaying ? "flex" : "hidden"} relative z-0 gap-x-1`}
         >
-          <img
+          <Image
+            width={100}
+            height={100}
+            priority
+            unoptimized
             src="/image/music.svg"
             alt=""
             className=" absolute w-[14px] h-[14px] right-1 -bottom-2 animate-floating"
           />
-          <img
+          <Image
+            width={100}
+            height={100}
+            priority
+            unoptimized
             src="/image/music.svg"
             alt=""
             className=" absolute w-[14px] h-[14px] -bottom-2  animate-floating2 "
           />
         </div>
-        <img
+        <Image
+          width={100}
+          height={100}
+          priority
+          unoptimized
           src="/image/gramophone.svg"
           alt=""
           className="w-[25px] h-[25px] relative z-[1]"
