@@ -23,7 +23,7 @@ export default function Home() {
       <div
         className={`${
           isOpen ? "overflow-y-auto" : "overflow-y-hidden"
-        } w-full  relative max-w-lg min-w-[320px] mx-auto custom-scrollbar`}
+        } w-full h-screen  relative max-w-lg min-w-[320px] mx-auto custom-scrollbar`}
       >
         <CoverMobile
           isOpen={isOpen}
@@ -31,7 +31,7 @@ export default function Home() {
           setIsPlaying={setIsPlaying}
         />
         <WelcomeSection isOpen={isOpen} />
-        
+
         <AudioControll
           isOpen={isOpen}
           isPlaying={isPlaying}
