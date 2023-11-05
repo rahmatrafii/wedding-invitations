@@ -11,7 +11,7 @@ const AudioControll = ({
   setIsPlaying: Dispatch<SetStateAction<boolean>>;
 }) => {
   return (
-    <div className="absolute right-7 bottom-7 z-10 flex items-center justify-center gap-x-4">
+    <div className="fixed right-7 bottom-7 z-10 flex items-center justify-center gap-x-4">
       <button
         type="button"
         onClick={() => setIsPlaying((prev) => !prev)}
