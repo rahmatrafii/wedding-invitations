@@ -16,7 +16,7 @@ const CoverMobile = ({
         isOpen
           ? "-translate-y-full opacity-0 invisible"
           : "translate-y-0 opacity-100 visible"
-      } transition-all duration-1000 w-full h-screen  min-w-[320px] absolute z-[3]`}
+      } transition-all duration-1000 w-full h-screen max-h-screen  min-w-[320px] absolute z-[3]`}
     >
       <Image
         width={100}
@@ -59,24 +59,24 @@ const CoverMobile = ({
           />{" "}
           <p> Open Invitation</p>
         </button>
-        <div className=" w-full absolute left-0 bottom-0">
-          <Image
-            width={100}
-            height={100}
-            unoptimized
-            src="/image/shape-1.svg"
-            alt="shape-1"
-            className="w-full h-full relative z-0"
-          />
-          <div className="absolute z-[1] w-full left-0 bottom-0 p-8 text-center text-white">
-            {" "}
-            <p className="text-sm mb-1 animate-fade-up">
-              Created with by ♥ invitato
-            </p>
-            <p className="text-xs animate-fade-up">
-              © 2023 Nailal & Via. All Rights Reserved
-            </p>
-          </div>
+      </div>
+      <div className="w-full absolute left-0 bottom-0">
+        <Image
+          width={100}
+          height={100}
+          unoptimized
+          src="/image/shape-1.svg"
+          alt="shape-1"
+          className="w-full h-full relative z-0"
+        />
+        <div className="absolute z-[1] w-full left-0 bottom-0 p-8 text-center text-white">
+          {" "}
+          <p className="text-sm mb-1 animate-fade-up">
+            Created with by ♥ invitato
+          </p>
+          <p className="text-xs animate-fade-up">
+            © 2023 Nailal & Via. All Rights Reserved
+          </p>
         </div>
       </div>
     </div>

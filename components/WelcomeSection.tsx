@@ -6,7 +6,7 @@ const WelcomeSection = ({ isOpen }: { isOpen: boolean }) => {
     <div
       className={`${
         isOpen ? " open" : "closed"
-      } transition-all relative duration-[4000] w-full h-screen max-w-lg min-w-[320px] text-white z-[1]`}
+      } transition-all relative duration-[4000] w-full h-screen max-h-screen max-w-lg min-w-[320px] text-white z-[1]`}
     >
       <div>
         <Image
