@@ -16,7 +16,7 @@ const CoverMobile = ({
         isOpen
           ? "-translate-y-full opacity-0 invisible"
           : "translate-y-0 opacity-100 visible"
-      } transition-all duration-1000 w-full h-screen max-h-screen  min-w-[320px] absolute z-[3]`}
+      } transition-all duration-1000 w-full h-full  min-w-[320px] absolute z-[3]`}
     >
       <Image
         width={100}

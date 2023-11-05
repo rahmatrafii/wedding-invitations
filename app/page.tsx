@@ -16,12 +16,14 @@ export default function Home() {
     }
   }, [isOpen, isPlaying]);
   return (
-    <main className="flex max-h-screen items-center">
-      <div className="flex-1 h-screen relative  hidden lg:block border-r-2">
+    <main className="flex max-h-screen w-full">
+      <div className="flex-1 h-screen relative  hidden lg:block border-r-2 overflow-hidden">
         <CoverDesktop />
       </div>
       <div
-        className={` overflow-y-hidden w-full relative max-w-lg min-w-[320px] mx-auto custom-scrollbar`}
+        className={`${
+          isOpen ? "overflow-y-auto" : "overflow-y-hidden"
+        } w-full  relative max-w-lg min-w-[320px] mx-auto custom-scrollbar`}
       >
         <CoverMobile
           isOpen={isOpen}
@@ -29,6 +31,7 @@ export default function Home() {
           setIsPlaying={setIsPlaying}
         />
         <WelcomeSection isOpen={isOpen} />
+        
         <AudioControll
           isOpen={isOpen}
           isPlaying={isPlaying}
