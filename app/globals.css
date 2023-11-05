@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&family=Kaushan+Script&family=Luxurious+Script&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bg-glass {
+  background: rgba(239, 239, 239, 0.65);
+  backdrop-filter: blur(3px);
+}
+body {
+  max-height: 100vh;
+  overflow-y: hidden;
+}
+
+.open {
+  animation: fadeIn 1s ease-in 0.2s forwards;
+}
+
+.closed {
+  animation: fadeOut 1s ease-out forwards;
+  visibility: hidden;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+}
